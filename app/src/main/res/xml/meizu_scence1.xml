@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <!--    向前-->
+    <Transition
+        motion:constraintSetEnd="@+id/nextb"
+        motion:constraintSetStart="@id/startb"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorSide="top" />
+    </Transition>
+    <!--向后-->
+    <Transition
+        motion:constraintSetEnd="@+id/previousb"
+        motion:constraintSetStart="@+id/startb"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragDown"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/nextb">
+        <Constraint
+            android:id="@+id/rv_list2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/ll_meizu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/rv_list2" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/startb">
+        <Constraint
+            android:id="@+id/rv_list2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/ll_meizu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintTop_toBottomOf="@+id/rv_list2" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/previousb">
+        <Constraint
+            android:id="@+id/rv_list2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/ll_meizu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+</MotionScene>

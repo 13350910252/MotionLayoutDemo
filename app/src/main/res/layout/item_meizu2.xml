@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="100dp"
+    android:background="@color/red"
+    app:layoutDescription="@xml/item_meizu_scence2"
+    app:showPaths="true">
+
+    <TextView
+        android:id="@+id/tv_item_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/view_item_one"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@color/colorAccent"
+        android:text="Button" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

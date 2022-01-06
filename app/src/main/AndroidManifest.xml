@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yinp.motionlayoutdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.TwoActivity"></activity>
+        <activity android:name=".activity.MeizuActivity2" />
+        <activity android:name=".jiandan.EazyOneActivity" />
+        <activity android:name=".activity.MeizuActivity" />
+        <activity android:name=".activity.ViewMoveActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.CardMotionActivity" />
+        <activity android:name=".activity.CarMotionActivity" />
+        <activity android:name=".activity.AnimationAdapterActivity" />
+    </application>
+
+</manifest>

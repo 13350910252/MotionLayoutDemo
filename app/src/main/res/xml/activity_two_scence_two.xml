@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        android:id="@+id/forwardaa"
+        app:constraintSetEnd="@id/nextaa"
+        app:constraintSetStart="@+id/startaatwo"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragStart"
+            app:touchAnchorSide="start" />
+    </Transition>
+    <Transition
+        android:id="@+id/backwardaa"
+        app:constraintSetEnd="@id/previousaa"
+        app:constraintSetStart="@+id/startaatwo"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragEnd"
+            app:touchAnchorSide="end" />
+
+    </Transition>
+    <Transition
+        app:constraintSetEnd="@id/startaatwo"
+        app:constraintSetStart="@+id/startaatwo"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchAnchorSide="bottom" />
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/nextaa">
+
+        <Constraint
+            android:id="@+id/iv11"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv22"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv33"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintLeft_toRightOf="@+id/iv22"
+            app:layout_constraintRight_toLeftOf="@+id/iv44"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv44"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/startaatwo">
+
+        <Constraint
+            android:id="@+id/iv00"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv11"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv22"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            app:layout_constraintLeft_toRightOf="@+id/iv11"
+            app:layout_constraintRight_toLeftOf="@+id/iv33"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv33"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv44"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/previousaa">
+
+        <Constraint
+            android:id="@+id/iv00"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintLeft_toRightOf="@+id/iv00"
+            app:layout_constraintRight_toLeftOf="@+id/iv22"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv22"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv33"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+</MotionScene>

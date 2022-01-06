@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ml_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_two_scence"
+    app:showPaths="true"
+    app:motionProgress="0"
+    app:motionDebug="SHOW_ALL"
+    tools:context=".activity.TwoActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/ml_cc"
+        android:layout_width="match_parent"
+        app:motionDebug="SHOW_ALL"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_two_scence_two"
+        app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+        app:motionProgress="0"
+        app:showPaths="true">
+
+        <ImageView
+            android:id="@+id/iv00"
+            android:layout_width="60dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv11"
+            android:layout_width="60dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv22"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv1"
+            app:layout_constraintRight_toLeftOf="@+id/iv3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv33"
+            android:layout_width="60dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv44"
+            android:layout_width="60dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/card5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.helper.widget.Carousel
+            android:id="@+id/carousel12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:carousel_backwardTransition="@+id/backwardaa"
+            app:carousel_firstView="@+id/iv22"
+            app:carousel_forwardTransition="@+id/forwardaa"
+            app:carousel_infinite="true"
+
+            app:carousel_nextState="@+id/nextaa"
+            app:carousel_previousState="@+id/previousaa"
+
+            app:constraint_referenced_ids="iv00,iv11,iv22,iv33,iv44" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <!--    <androidx.constraintlayout.helper.widget.MotionEffect-->
+    <!--        android:id="@+id/meff"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:constraint_referenced_ids="iv00,iv11,iv22,iv33,iv44"-->
+    <!--        app:motionEffect_move="auto" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_zhege"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff00ff" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_zhege"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/red" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
